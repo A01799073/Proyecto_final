@@ -9,7 +9,7 @@
 class Tanque
 {
 private:
-    int capacidad=42;
+    int capacidad;
     int nivelActual;
 public:
     Tanque();
