@@ -20,6 +20,8 @@ public:
     int getNivelActual();
     void setNivelActual(int n);
 
+    string aviso();
+
     void imprimir();
     
 };

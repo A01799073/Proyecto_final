@@ -42,6 +42,17 @@ void Tanque::setNivelActual(int n)
     }
 }
 
+string Tanque::aviso()
+{
+    if (capacidad)
+    {
+        /* code */
+    }
+    
+    return string();
+}
+
+double Tanque::calcular
 void Tanque::imprimir()
 {
     cout << "Capacidad: " << capacidad << endl;
