@@ -8,54 +8,43 @@ using namespace std;
 
 Tanque::Tanque()
 {
-    capacidad=42;
-    nivelActual=0;
+    capacidad = 42;
+    nivelActual = 0;
 }
 
-int Tanque::getCapacidad()
+int Tanque::getCapacidad()   //valor maximo de carga de la capacidad del tanque 
 {
     return capacidad;
 }
 
-void Tanque::setCapacidad(int n)
-{
-    if(n>0)
-    {
-        capacidad=n;
-    }
-    else
-    {
-        capacidad=0;
-    }
-}
-
-int Tanque::getNivelActual()
+int Tanque::getNivelActual() //nivel actual del tanque
 {
     return nivelActual;
 }
 
-void Tanque::setNivelActual(int n)
+void Tanque::setNivelActual(int )
 {
-    if(n>=0 && n<=capacidad)
-    {
-        nivelActual=n;
-    }
+    //ciclo for que vaya dismminuyendo el nivel del tanque 
+
+}
+
+void Tanque::setCapacidad(int num)   //LLenar el tanque
+{
+    
 }
 
 string Tanque::aviso()
 {
-    if (capacidad)
+    if (capacidad * 0.15)
     {
-        /* code */
+        cout << "La capacidade del tanque ha llegado al 15%" << endl;
+        cout << "Por favor de llenar el tanque" << endl;
     }
-    
-    return string();
+    // return string();
 }
 
-double Tanque::calcular
-void Tanque::imprimir()
+    void Tanque::imprimir()
 {
     cout << "Capacidad: " << capacidad << endl;
     cout << "Nivel actual: " << nivelActual << endl;
-
 }

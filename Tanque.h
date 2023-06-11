@@ -1,7 +1,7 @@
 /*
-    *Autor: Kenia Esmeralda Ramos Javier.
-    *Representa la capacidad que contiene el tanque y su nivel de tanque actual.
-    *Declaración de la clase Tanque.
+ *Autor: Kenia Esmeralda Ramos Javier.
+ *Representa la capacidad que contiene el tanque y su nivel de tanque actual.
+ *Declaración de la clase Tanque.
  */
 
 #ifndef TANQUE_H
@@ -11,9 +11,10 @@ class Tanque
 private:
     int capacidad;
     int nivelActual;
+
 public:
     Tanque();
-    
+
     int getCapacidad();
     void setCapacidad(int n);
 
@@ -23,6 +24,5 @@ public:
     string aviso();
 
     void imprimir();
-    
 };
 #endif
