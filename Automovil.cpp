@@ -7,7 +7,17 @@
 using namespace std;
 bool Auto::encender()
 {
-    return false;
+    if (true)
+    {
+        cout<<"Las luces están prendidas"<<endl;
+        return false;
+    }
+    else
+    {
+        cout<<"Las luces están apagadas"<<enld;
+        return true;
+    }
+    
 }
 
 bool Auto::apagar()
@@ -47,8 +57,10 @@ int Auto::getVelocidadActual()
 
 void Auto::setVelocidadActual()
 {
+
 }
 
 void Auto::imprimir()
 {
+
 }
