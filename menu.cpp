@@ -14,19 +14,8 @@
 */
 using namespace std;
 
-// prototipo
-int opcion(int num);
-
 // programa principal
 int main()
-{
-    // Code
-}
-
-// Prueba -----Parece más un main
-// Se cambiará mas adelante
-
-int opcion(int num)
 {
     int respuesta = 1;
     while (int respuesta == 1;)
@@ -42,7 +31,7 @@ int opcion(int num)
         cout << "7.-Indicador de la presion de llantas......." << endl;
         cout << "8.-Salir...................................." << endl;
 
-        while (num = cin.get() != 1 && num != 2 && num != 3 && num != 4 && num != 5 && num != 6 && num != 7 && pedido num!=8)
+        while (num = cin.get() != 1 && num != 2 && num != 3 && num != 4 && num != 5 && num != 6 && num != 7 && pedido num != 8)
         {
             cout << "Opcion no disponible dentro del menu establecido" << endl;
         }
@@ -75,11 +64,10 @@ int opcion(int num)
         {
             /* code */
         }
-        else if (num==8)
+        else if (num == 8)
         {
             cout << "Hasta la proxima" << endl;
         }
-        
 
         while (registro = cin.get() != 1 && registro != 2)
         {
