@@ -6,6 +6,8 @@
 
 #ifndef TANQUE_H
 #define TANQUE_H
+#include <string>
+
 class Tanque
 {
 private:
@@ -21,7 +23,7 @@ public:
     int getNivelActual();
     void setNivelActual(int n);
 
-    string aviso();
+   std::string aviso();
 
     void imprimir();
 };
