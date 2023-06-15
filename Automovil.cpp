@@ -4,30 +4,46 @@
 */
 
 #include "Automovil.h"
+#include <iostream>
 using namespace std;
 bool Auto::encender()
 {
     if (true)
     {
-        cout<<"Las luces están prendidas"<<endl;
-        return false;
+        cout <<"El ya auto se está encedido"<<endl;
     }
-    else
+    
+    if (false)
     {
-        cout<<"Las luces están apagadas"<<enld;
-        return true;
+        estado = !estado;
+        cout << "El auto esta prendido" << endl;
+        return estado;
     }
     
 }
 
 bool Auto::apagar()
 {
-    return false;
+    if (true)
+    {
+        cout << "El auto ya está prendido" << endl;
+        return true;
+    }
+    else
+    {
+        cout << "El auto está apagado" << endl;
+    }
 }
 
 bool Auto::acelerar()
 {
-    return false;
+    if (true)
+    {
+        for (i = 0; i < 231; 15 ++)
+        {
+            contadorVelocidad = 0;
+        }
+    }
 }
 
 bool Auto::frenar()
@@ -45,11 +61,6 @@ bool Auto::apagarLuces()
     return false;
 }
 
-int get.Auto::VelocidadActual()
-{
-    return 0;
-}
-
 int Auto::getVelocidadActual()
 {
     return 0;
@@ -57,10 +68,8 @@ int Auto::getVelocidadActual()
 
 void Auto::setVelocidadActual()
 {
-
 }
 
 void Auto::imprimir()
 {
-
 }
