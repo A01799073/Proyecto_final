@@ -18,13 +18,10 @@ public:
     Tanque();
 
     int getCapacidad();
-    void setCapacidad(int n);
+    void setCapacidad(double);
 
     int getNivelActual();
-    void setNivelActual(int n);
-
-   std::string aviso();
-
+    void setNivelActual(bool estado, int velocidad);
     void imprimir();
 };
 #endif
