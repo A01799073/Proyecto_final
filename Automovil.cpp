@@ -10,28 +10,28 @@ bool Auto::encender()
 {
     if (true)
     {
-        cout <<"El ya auto se está encedido"<<endl;
+        cout << "El ya auto se esta encedido" << endl;
     }
-    
-    if (false)
+
+    else
     {
         estado = !estado;
-        cout << "El auto esta prendido" << endl;
+        cout << "Ahora el auto esta prendido" << endl;
         return estado;
     }
-    
 }
 
 bool Auto::apagar()
 {
     if (true)
     {
-        cout << "El auto ya está prendido" << endl;
-        return true;
+        cout << "El auto ya esta apagado" << endl;
     }
     else
     {
+        estado = !estado;
         cout << "El auto está apagado" << endl;
+        return estado;
     }
 }
 
@@ -39,9 +39,10 @@ bool Auto::acelerar()
 {
     if (true)
     {
-        for (i = 0; i < 231; 15 ++)
+        if (estado && velocidad < 230)
         {
-            contadorVelocidad = 0;
+            velocidad += 15;
+        
         }
     }
 }
