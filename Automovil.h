@@ -26,4 +26,5 @@ public:
     void setVelocidadActual();
 
     void imprimir();
-}
+};
+#endif
