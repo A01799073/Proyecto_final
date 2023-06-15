@@ -9,21 +9,29 @@ class Auto
 {
 private:
     bool estado;
-    int velocidad;
-    int numLlantas = 4;
+    int velocidadIncial;
+    int velocidadActual;
+    int numLlantas4;
 
 public:
+    Auto();
+
     bool encender();
+//    bool getEncender();
+//    bool setEncender();
+
     bool apagar();
+//    bool getApagar();
+//    bool setApagar();
+
+    int getVelocidadActual();
+   void setVelocidadActual();
 
     bool acelerar();
     bool frenar();
 
     bool prenderLuces();
     bool apagarLuces();
-
-    int getVelocidadActual();
-    void setVelocidadActual();
 
     void imprimir();
 };
