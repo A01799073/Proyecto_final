@@ -12,39 +12,43 @@ Tanque::Tanque()
     nivelActual = 0;
 }
 
-int Tanque::getCapacidad()   //valor maximo de carga de la capacidad del tanque 
+int Tanque::getCapacidad() // valor maximo de carga de la capacidad del tanque
 {
     return capacidad;
 }
 
-int Tanque::getNivelActual() //nivel actual del tanque
+int Tanque::getNivelActual() // nivel actual del tanque
 {
     return nivelActual;
 }
 
-void Tanque::setNivelActual(int )
+void Tanque::setNivelActual(bool estado, int velocidad)
 {
-    //ciclo for que vaya dismminuyendo el nivel del tanque 
-
-}
-
-void Tanque::setCapacidad(int num)   //LLenar el tanque
-{
-    
-}
-
-string Tanque::aviso()
-{
-    if (capacidad * 0.15)
+    if (estado && velocidad < 230)
     {
+        nivelActual=capacidad- 0.005 * velocidad;
+        
+        if (42 * 0.15)
+        {
         cout << "La capacidade del tanque ha llegado al 15%" << endl;
         cout << "Por favor de llenar el tanque" << endl;
+        }
     }
-    // return string();
 }
 
-    void Tanque::imprimir()
+void Tanque::setCapacidad(double num) // LLenar el tanque
+{
+    capacidad+= num;
+    if (capacidad>42)
+    {
+        capacidad=42;
+        cout<<"El nivel de gasolina ha sobrepasado el nivel de tanque"<<endl;
+        cout<<"El nivel Actual del tanque es de"<< capacidad<<endl;   
+    }   
+}
+
+void Tanque::imprimir()
 {
     cout << "Capacidad: " << capacidad << endl;
-    cout << "Nivel actual: " << nivelActual << endl;
+    cout << "Nivel actual: " << nivelActual << endl;   
 }
