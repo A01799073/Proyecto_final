@@ -3,44 +3,27 @@
     Implementación de la clase Automovil.
 */
 
+#include <iostream>
 #include "Automovil.h"
+#include "Tanque.h"
+using namespace sdt;
 
-Automovil::Auto()
+Automovil::Automovil()
 {
-    bool estadoAuto=false;
-    bool estadoLuces=false;
-    int velocidadInial=0;
-    int velocidadActual=0;
-    int numLlantas=4;
+    bool estadoAuto = apagado;
+    bool estadoLuces = apagado;
+    int velocidadInial = 0;
+    //    int numLlantas=4;
 }
 
-bool Automovil::encender()
+bool Automovil::encenderAuto()
 {
-    if (estadoAuto=true)
-    {
-        cout << "El ya auto se esta encedido" << endl;
-    }
-
-    else
-    {
-        estadoAuto = !estadoAuto;
-        cout << "Ahora el auto esta prendido" << endl;
-        return estadoAuto;
-    }
+    return encedido;
 }
 
-bool Automovil::apagar()
+bool Automovil::apagarAuto()
 {
-    if (estadoAuto=false)
-    {
-        cout << "El auto ya esta apagado" << endl;
-    }
-    else
-    {
-        estadoAuto = !estadoAuto;
-        cout << "Ahora el auto esta apagado" << endl;
-        return estadoAuto;
-    }
+    return apagado;
 }
 
 int Automovil::getVelocidadActual()
@@ -50,29 +33,30 @@ int Automovil::getVelocidadActual()
 
 void Automovil::setVelocidadActual()
 {
-
 }
-
-
 
 bool Automovil::acelerar()
 {
-        if (estado==true && velocidadActual< 230)
+    if (estadoAuto = encedido && velocidadActual < 230)
     {
-        velocidadActual+=15;
+        velocidadActual += 15;
         return velocidadActual;
     }
-    return false;
+    else if (estadoAuto == apagarAuto)
+    {
+        cout << "No se puede acelerar si el auto esta apagado" << endl;
+    }
+
 }
 bool Automovil::frenar()
 {
-    if (estado==true)
+    if (estado == true)
     {
-        velocidadActual-=25;
-        if (velocidadActual<0)
+        velocidadActual -= 25;
+        if (velocidadActual < 0)
         {
-            velocidadActual=0;
-            cout<<"La velocidad ha llegado a"<<velocidadActual<<endl;
+            velocidadActual = 0;
+            cout << "La velocidad ha llegado a" << velocidadActual << endl;
         }
     }
     return false;
@@ -80,19 +64,15 @@ bool Automovil::frenar()
 
 bool Automovil::prenderLuces()
 {
-    return true;
+    return prendidas;
 }
 
 bool Automovil::apagarLuces()
 {
-    return false;
+    return apagadas;
 }
 
 void Automovil::aviso()
 {
-    if (velocidadIncial>160)
-    {
-        cout<<"¡PELIGRO!"
-    }
     
 }
