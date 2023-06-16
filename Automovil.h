@@ -12,9 +12,9 @@ private:
     bool estadoAuto;
     bool estadoLuces;
     int velocidadIncial;
-   // Tanque capacidad;
-   // Tanque nivelActual;
-//    int numLlantas4;
+    // Tanque capacidad;
+    // Tanque nivelActual;
+    //    int numLlantas4;
 
 public:
     Automovil();
