@@ -21,11 +21,9 @@ public:
     Tanque();
 
     int getCapacidad();
-    void setCapacidad(double);
+    void setNivelActual(bool estado, int velocidad);
+    void setCapacidad(double num);
 
     int getNivelActual();
-    void setNivelActual(bool estado, int velocidad);
-    string aviso();
-    void imprimir();
 };
 #endif
