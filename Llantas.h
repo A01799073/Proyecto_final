@@ -2,12 +2,13 @@
 #define LLANTAS_H
 class Llantas
 {
-    private:
+private:
     int presion;
 
-    public:
-    LLantas();
+public:
+    Llantas();
+
     int getPresion();
-    void setPresion();
+    void setPresion(double num);
 };
 #endif
