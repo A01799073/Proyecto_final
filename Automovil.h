@@ -1,31 +1,26 @@
 /*
  *Autor: Kenia Esmeralda Ramos Javier.
  *Declaración de la clase Auto
-*/
+ */
 
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
-class Auto
+class Automovil
 {
 private:
-    bool estado;
+    bool estadoAuto;
+    bool estadoLuces;
     int velocidadIncial;
-    int velocidadActual;
     int numLlantas4;
 
 public:
-    Auto();
+    Automovil();
 
-    bool encender();
-//    bool getEncender();
-//    bool setEncender();
-
-    bool apagar();
-//    bool getApagar();
-//    bool setApagar();
+    bool encenderAuto();
+    bool apagarAuto();
 
     int getVelocidadActual();
-   void setVelocidadActual();
+    void setVelocidadActual();
 
     bool acelerar();
     bool frenar();

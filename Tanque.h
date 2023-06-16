@@ -4,9 +4,12 @@
  *Declaración de la clase Tanque.
  */
 
+#include <iostream>
+#include <string>
+using namespace std;
+
 #ifndef TANQUE_H
 #define TANQUE_H
-#include <string>
 
 class Tanque
 {
@@ -22,6 +25,7 @@ public:
 
     int getNivelActual();
     void setNivelActual(bool estado, int velocidad);
+    string aviso();
     void imprimir();
 };
 #endif
