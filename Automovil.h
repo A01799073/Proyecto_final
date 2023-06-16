@@ -9,11 +9,7 @@ class Automovil
 private:
     bool estadoAuto;
     bool estadoLuces;
-    int velocidadIncial;
-    // Tanque capacidad;
-    // Tanque nivelActual;
-    //    int numLlantas4;
-
+    int velocidadInicial;
 public:
     Automovil();
 
@@ -21,7 +17,7 @@ public:
     bool apagarAuto();
 
     int getVelocidadActual();
-    void setVelocidadActual(int velocidadInicial);
+    void setVelocidadActual(int num);
 
     bool acelerar();
     bool frenar();
