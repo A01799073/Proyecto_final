@@ -2,14 +2,16 @@
  *Autor: Kenia Esmeralda Ramos Javier.
  *Declaración de la clase Auto
  */
+#include "Luces.cpp"
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 class Automovil
 {
 private:
     bool estadoAuto;
-    bool estadoLuces;
     int velocidadInicial;
+    Luces luces;
+
 public:
     Automovil();
 
