@@ -7,13 +7,16 @@
 */
 
 #include <iostream>
+#include "Automovil.h"
 #include "Automovil.cpp"
+#include "Tanque.h"
 #include "Tanque.cpp"
 using namespace std;
 
 int main()
 {
     int opcionMenu;
+    Automovil a;
 
     do
     {
@@ -37,7 +40,7 @@ int main()
         case 1:
             if ()
             {
-
+                
             }
             else
             {

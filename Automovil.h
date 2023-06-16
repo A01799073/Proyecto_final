@@ -2,8 +2,6 @@
  *Autor: Kenia Esmeralda Ramos Javier.
  *Declaración de la clase Auto
  */
-
-#include "Tanque.h"
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 class Automovil
