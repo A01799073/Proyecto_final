@@ -27,7 +27,5 @@ public:
 
     bool prenderLuces();
     bool apagarLuces();
-
-    void aviso();
 };
 #endif
