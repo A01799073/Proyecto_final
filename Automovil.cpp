@@ -14,6 +14,8 @@ Automovil::Automovil()
     bool estadoAuto = false;
     bool estadoLuces = false;
     int velocidadInial = 0;
+  //  capacidad.setCapacidad(42);
+  //  nivelActual.setNivelActual(42);
     //    int numLlantas=4;
 }
 
@@ -45,11 +47,12 @@ int Automovil::getVelocidadActual()
 {
     return velocidadIncial;
 }
-/*
-void Automovil::setVelocidadActual()
+
+void Automovil::setVelocidadActual(int velocidadInicial)
 {
+    this->velodidadInical=velocidadInicial;
 }
-*/
+
 bool Automovil::acelerar()
 {
     if (estadoAuto = encendido && velocidadIncial < 230)
