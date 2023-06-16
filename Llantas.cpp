@@ -1,14 +1,16 @@
 #include "Llantas.h"
 
-Llantas::LLantas()
+Llantas::Llantas()
 {
+    presion=33;
 }
 
 int Llantas::getPresion()
 {
-    return 0;
+    return presion;
 }
 
-void Llantas::setPresion()
+void Llantas::setPresion(double num)
 {
+    presion=num;
 }
