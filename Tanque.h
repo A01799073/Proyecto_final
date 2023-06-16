@@ -4,7 +4,7 @@
  *Declaración de la clase Tanque.
  */
 
-//#include "Automovil.h"
+#include "Automovil.cpp"
 #ifndef TANQUE_H
 #define TANQUE_H
 
@@ -13,12 +13,13 @@ class Tanque
 private:
     int capacidad;
     int nivelActual;
+    Automovil velocidad;
 
 public:
     Tanque();
 
     int getCapacidad();
-    void setNivelActual(bool estado, int velocidad);
+    void setNivelActual(bool estadoauto, int num);
     void setCapacidad(double num);
 
     int getNivelActual();
