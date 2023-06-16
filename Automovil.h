@@ -11,7 +11,7 @@ private:
     bool estadoAuto;
     bool estadoLuces;
     int velocidadIncial;
-    int numLlantas4;
+//    int numLlantas4;
 
 public:
     Automovil();
@@ -28,6 +28,6 @@ public:
     bool prenderLuces();
     bool apagarLuces();
 
-    void imprimir();
+    void aviso();
 };
 #endif
