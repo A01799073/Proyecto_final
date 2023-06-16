@@ -5,18 +5,13 @@
 
 #include <iostream>
 #include "Automovil.h"
-#include "Tanque.h"
-#include "Tanque.cpp"
-using namespace sdt;
+using namespace std;
 
 Automovil::Automovil()
 {
     bool estadoAuto = false;
     bool estadoLuces = false;
-    int velocidadInial = 0;
-    //  capacidad.setCapacidad(42);
-    //  nivelActual.setNivelActual(42);
-    //    int numLlantas=4;
+    int velocidadInicial = 0;
 }
 
 bool Automovil::encenderAuto()
@@ -43,35 +38,35 @@ bool Automovil::apagarAuto()
 
 int Automovil::getVelocidadActual()
 {
-    return velocidadIncial;
+    return velocidadInicial;
 }
 
-void Automovil::setVelocidadActual(int velocidadInicial)
+void Automovil::setVelocidadActual(int num)
 {
-    this->velodidadInical = velocidadInicial;
+    this->velocidadInicial = num;
 }
 
 bool Automovil::acelerar()
 {
-    if (estadoAuto = encendido && velocidadIncial < 230)
+    if (estadoAuto = true && velocidadInicial < 230)
     {
-        velocidadIncial += 15;
-        return velocidadIncial;
+        velocidadInicial += 15;
+        return velocidadInicial;
     }
-    else if (estadoAuto = apagado)
+    else if (estadoAuto = false)
     {
         cout << "No se puede acelerar si el auto esta apagado" << endl;
     }
 }
 bool Automovil::frenar()
 {
-    if (estadoAuto = encenderAuto)
+    if (estadoAuto = true)
     {
-        velocidadActual -= 25;
-        if (velocidadActual < 0)
+        velocidadInicial -= 25;
+        if (velocidadInicial < 0)
         {
-            velocidadActual = 0;
-            cout << "La velocidad ha llegado a" << velocidadActual << endl;
+            velocidadInicial = 0;
+            cout << "La velocidad ha llegado a" << velocidadInicial << endl;
         }
         else
         {
@@ -83,34 +78,24 @@ bool Automovil::frenar()
 
 bool Automovil::prenderLuces()
 {
-    if (estadoAuto = true &&estadoLuces = false)
+    if (estadoAuto==true)
     {
-        return true;
-    }
-    else if (estadoAuto = true &&estadoLuces = true)
+        if (estadoLuces==false)
+        {
+            estadoLuces=true;
+            cout<<"Las luces se encendieron correctamente"<<endl;
+        }
+        else if (estadoLuces = true)
     {
         cout << "Las luces ya estaban prendidas" << endl;
-    }
+    }    
     else
     {
-        cout << "No se pueden prender las luces si el auto esta apagado" << endl;
-    }
+        cout << "No se pueden prender las luces si el auto esta apagado" << endl;   
+    }   
 }
-
-bool Automovil::apagarLuces()
+/*bool Automovil::apagarLuces()
 {
-    if (estadoAuto = true &&estadoLuces = true)
-    {
-        return false;
-    }
-    else if (estadoAuto = true && estadoLuces == false)
-    {
-        cout << "Las luces ya estaban apagadas"
-    }
-    else
-    {
-        cout << "Las luces no se pueden apagar si el auto esta apagado" << endl;
-    }
-
-    return apagadas;
+    return false;
 }
+*/
