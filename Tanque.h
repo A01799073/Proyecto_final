@@ -4,8 +4,10 @@
  *Declaración de la clase Tanque.
  */
 
+#include "Automovil.h"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 #ifndef TANQUE_H
