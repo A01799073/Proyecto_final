@@ -26,7 +26,9 @@ void Tanque::setCapacidad(double num) // LLenar el tanque
         cout << "El nivel Actual del tanque es de" << capacidad << endl;
     }
     else
-        cout << "Por favor ingrese el numero positivo de litros que desea agregar"
+    {
+        cout << "Por favor ingrese el numero positivo de litros que desea agregar"<<endl;
+    }
 }
 
 int Tanque::getNivelActual() // nivel actual del tanque
