@@ -10,13 +10,13 @@ using namespace std;
 Automovil::Automovil()
 {
     bool estadoAuto = false;
-    bool estadoLuces = false;
+    luces.setEstado(false);
     int velocidadInicial = 0;
 }
 
 bool Automovil::encenderAuto()
 {
-    if (estadoAuto = false)
+    if (estadoAuto == false)
     {
         return true;
     }
@@ -28,7 +28,7 @@ bool Automovil::encenderAuto()
 
 bool Automovil::apagarAuto()
 {
-    if (estadoAuto = true)
+    if (estadoAuto == true)
     {
         return false;
     }
@@ -48,7 +48,7 @@ void Automovil::setVelocidadActual(int num)
 
 bool Automovil::acelerar()
 {
-    if (estadoAuto = true && velocidadInicial < 230)
+    if (estadoAuto == true && velocidadInicial < 230)
     {
         velocidadInicial += 15;
         return velocidadInicial;
@@ -60,7 +60,7 @@ bool Automovil::acelerar()
 }
 bool Automovil::frenar()
 {
-    if (estadoAuto = true)
+    if (estadoAuto== true)
     {
         velocidadInicial -= 25;
         if (velocidadInicial < 0)
@@ -78,24 +78,37 @@ bool Automovil::frenar()
 
 bool Automovil::prenderLuces()
 {
-    if (estadoAuto==true)
+    if (estadoAuto == true)
     {
-        if (estadoLuces==false)
+        if (luces.getEstado()==false)
         {
-            estadoLuces=true;
-            cout<<"Las luces se encendieron correctamente"<<endl;
+            cout << "Las luces se encendieron correctamente" << endl;
         }
-        else if (estadoLuces = true)
-    {
-        cout << "Las luces ya estaban prendidas" << endl;
-    }    
+        else
+        {
+            cout<< "Las luces ya estaban prendidas" << endl;
+        }
+    }
     else
     {
-        cout << "No se pueden prender las luces si el auto esta apagado" << endl;   
-    }   
+        cout << "No se pueden prender las luces si el auto esta apagado" << endl;
+    }
 }
-/*bool Automovil::apagarLuces()
+bool Automovil::apagarLuces()
 {
-    return false;
+    if (estadoAuto==true)
+    {
+        if (luces.getEstado()==true)
+        {
+            cout<< "Las luces se apagaron correctamente"<<endl;
+        }
+        else
+        {
+            cout<<"Las luces ya estaban apagadas"<<endl;
+        }
+    }
+    else
+    {
+        cout<<"No se puede preden prender las luces si el auto esta apagado"<<endl;
+    }
 }
-*/
