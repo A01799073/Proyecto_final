@@ -3,6 +3,7 @@
  *Declaración de la clase Auto
  */
 #include "Luces.cpp"
+#include "Tanque.cpp"
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 class Automovil
@@ -11,6 +12,7 @@ private:
     bool estadoAuto;
     int velocidadInicial;
     Luces luces;
+    Tanque gasolina;
 
 public:
     Automovil();
