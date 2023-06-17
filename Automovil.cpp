@@ -2,20 +2,19 @@
     Autor:Kenia Esmeralda Ramos Javier.
     Implementación de la clase Automovil.
 */
-
 #include "Automovil.h"
+#include <iostream>
 using namespace std;
 
 Automovil::Automovil()
 {
     bool estadoAuto = false;
-    bool estadoLuces = false;
-    int velocidadInicial = 0;
+    int velocidadActual = 0;
 }
 
 bool Automovil::encenderAuto()
 {
-    if (estadoAuto = false)
+    if (estadoAuto == false)
     {
         return true;
     }
@@ -27,7 +26,7 @@ bool Automovil::encenderAuto()
 
 bool Automovil::apagarAuto()
 {
-    if (estadoAuto = true)
+    if (estadoAuto == true)
     {
         return false;
     }
@@ -37,20 +36,15 @@ bool Automovil::apagarAuto()
 
 int Automovil::getVelocidadActual()
 {
-    return velocidadInicial;
-}
-
-void Automovil::setVelocidadActual(int num)
-{
-    this->velocidadInicial = num;
+    return velocidadActual;
 }
 
 bool Automovil::acelerar()
 {
-    if (estadoAuto = true && velocidadInicial < 230)
+    if (estadoAuto = true && velocidadActual < 230)
     {
-        velocidadInicial += 15;
-        return velocidadInicial;
+        velocidadActual += 15;
+        return velocidadActual;
     }
     else if (estadoAuto = false)
     {
@@ -59,18 +53,19 @@ bool Automovil::acelerar()
 }
 bool Automovil::frenar()
 {
-    if (estadoAuto = true)
+    if (estadoAuto = true && velocidadActual>0)
     {
-        velocidadInicial -= 25;
-        if (velocidadInicial < 0)
+        velocidadActual -= 25;
+        return velocidadActual;
+        if (velocidadActual < 0)
         {
-            velocidadInicial = 0;
-            cout << "La velocidad ha llegado a" << velocidadInicial << endl;
+            velocidadActual = 0;
+            cout << "La velocidad ha llegado a" << velocidadActual << endl;
         }
-        else
-        {
-            cout << "No puede frenar si el auto está apagado, por favo enciendalo" << endl;
-        }
+    else
+    {
+        cout << "No puede frenar si el auto está apagado, por favo enciendalo" << endl;
+    }
     }
     return false;
 }
