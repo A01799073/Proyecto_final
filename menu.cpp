@@ -15,8 +15,8 @@ using namespace std;
 
 int main()
 {
+    Automovil auto1;
     int opcionMenu;
-    Automovil a;
 
     do
     {
@@ -38,31 +38,48 @@ int main()
         switch (opcionMenu)
         {
         case 1:
-            if ()
+        int opcionAuto;
+            cout<<"¿Desea apagar o prender el automovil?: "<<endl<<"1. Encender"<<endl<<"2.-Apagar"<<endl;
+            cin>>opcionAuto;
+
+            if (opcionAuto==1)
             {
-                
+                auto1.encenderAuto();
+                break;
+            }
+            else if (opcionAuto==2)
+            {
+                auto1.apagarAuto();
             }
             else
             {
-
+                count<<"Opcion no disponible"<<endl;
+                break;
             }
+
         case 2:
+            auto1.acelerar()
             break;
         case 3:
+            auto1.frenar();
             break;
         case 4:
+            auto1.prenderLuces();
             break;
         case 5:
+            auto1.apagarLuces();
             break;
 
         case 6:
+            //el constructor de la gasolina
             break;
         case 7:
+            auto1.
             break;
 
         case 8:
-            cout<<"¡Hasta la proxima!"<<endl;
-            cout<<"Saliendo.........."<<endl;
+            cout << "¡Hasta la proxima!" << endl;
+            cout << "Saliendo.........." << endl;
             break;
         default:
             cout << "La opcion no existe dentro del menu, por favor ingre uno de los numeros que aparecen en el menu" << endl;
