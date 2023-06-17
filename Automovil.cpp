@@ -3,10 +3,12 @@
     Implementación de la clase Automovil.
 */
 
-#include <iostream>
 #include "Automovil.h"
+<<<<<<< Updated upstream
 using namespace std;
 
+=======
+>>>>>>> Stashed changes
 Automovil::Automovil()
 {
     bool estadoAuto = false;
