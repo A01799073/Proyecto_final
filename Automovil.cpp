@@ -104,7 +104,7 @@ bool Automovil::apagarLuces()
             estadoLuces = false;
             cout << "Las luces se apagaron correctamente" << endl;
         }
-        else if (estadoLuces = false)
+        else if (estadoLuces == false)
         {
             cout << "Las luces ya estaban apagadas" << endl;
         }
