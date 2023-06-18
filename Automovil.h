@@ -10,13 +10,15 @@
 class Automovil
 {
 private:
+    // Atrubutos
     bool estadoAuto;
     int velocidadActual;
     Luces luces;
     Tanque tanque;
-    Llantas llantas[4];
+    Llantas llantas[4]; // arreglo de la posición de la llantas
 
 public:
+    // Metodos
     Automovil();
 
     bool encenderAuto();
@@ -29,7 +31,7 @@ public:
 
     bool prenderLuces();
     bool apagarLuces();
-    
+
     double cargar();
     void inflarDesinflarLlanta(int indice, double presion);
     void mostrarTablero();

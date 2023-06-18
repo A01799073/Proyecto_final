@@ -1,3 +1,7 @@
+/*
+    Autor:Kenia Esmeralda Ramos Javier.
+    Implementación de la clase Llantas.
+*/
 #include "Llantas.h"
 
 Llantas::Llantas()

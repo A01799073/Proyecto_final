@@ -6,19 +6,20 @@
     Descripción: Programa principal  de la situación problema
 */
 
-#include <iostream>
-#include "Automovil.h"
+#include <iostream>   //librería
+#include "Automovil.h" //clase Automovil
 using namespace std;
 
 int main()
 {
+    cout<<"Kenia Esmeralda Ramos Javier. A01799073. ITC"
     Automovil auto1;
     int opcionMenu;
 
     do
     {
-        auto1.mostrarTablero();
-
+        auto1.mostrarTablero();   //imprime el Tablero
+        //Menú del programa
         cout << "                    !Bienvenid@!                   " << endl;
         cout << " Seleccione la opcion que desea consultar del menu " << endl;
         cout << "------------------------MENU-----------------------" << endl;
@@ -32,27 +33,28 @@ int main()
         cout << " 8. Salir..........................................." << endl;
 
         cout << "Ingrese la opcion: " << endl;
-        cin >> opcionMenu;
+        cin >> opcionMenu;                     //guarda la opcion que escojio el usuario
 
-        switch (opcionMenu)
+        switch (opcionMenu)  //se utilizo para selecionar una opcionde varios casos posibles.
         {
         case 1:
             int opcionAuto;
+            //pregunta  que desea el usuario porque encender y apagar tienen diferentes constructores.
             cout << "¿Desea apagar o prender el automovil?: " << endl
-                 << "1. Encender" << endl
+                 << "1. Encender" << endl  
                  << "2.-Apagar" << endl;
             cin >> opcionAuto;
 
-            if (opcionAuto == 1)
+            if (opcionAuto == 1)  //Opcion que usa el constructor Encender
             {
                 auto1.encenderAuto();
                 break;
             }
-            else if (opcionAuto == 2)
+            else if (opcionAuto == 2)  //Opcion que usa el constructor Apagar
             {
                 auto1.apagarAuto();
             }
-            else
+            else  //Si no se seleciona una opcion del 1 al 2 no muestra en la pantalla que no es una opcion disponible
             {
                 cout << "Opcion no disponible" << endl;
             }

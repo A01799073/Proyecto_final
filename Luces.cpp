@@ -1,3 +1,7 @@
+/*
+    Autor:Kenia Esmeralda Ramos Javier.
+    Implementación de la clase Luces.
+*/
 #include "Luces.h"
 
 Luces::Luces()
@@ -12,6 +16,6 @@ bool Luces::getEstado()
 
 bool Luces::setEstado(bool estadoNuevo)
 {
-    estado=estadoNuevo;
+    estado = estadoNuevo; // modifica el estado de las luces
     return estado;
 }

@@ -10,16 +10,17 @@
 class Tanque
 {
 private:
+    // Artibutos
     int capacidad;
     int nivelActual;
 
 public:
+    // Metodos
     Tanque();
 
     int getCapacidad();
     void setNivelActual(int num);
     void setCapacidad(double num);
     int getNivelActual();
-
 };
 #endif
