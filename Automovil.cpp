@@ -8,8 +8,8 @@ using namespace std;
 Automovil::Automovil()
 {
     bool estadoAuto = false;
-    luces.setEstado(false);
     int velocidadActual = 0;
+    luces.getEstado(false);
 }
 
 bool Automovil::encenderAuto()
@@ -20,9 +20,8 @@ bool Automovil::encenderAuto()
     }
     else
     {
-        cout << "El auto ya esta encendido" << endl;
+        return false;
     }
-    return 0;
 }
 
 bool Automovil::apagarAuto()
@@ -33,39 +32,39 @@ bool Automovil::apagarAuto()
     }
     else
     {
-        cout << "El auto está apagado" << endl;
+        return false;
     }
-    return 0;
 }
 
 int Automovil::getVelocidadActual()
 {
-    return velocidadInicial;
+    return velocidadActual;
 }
 
 bool Automovil::acelerar()
 {
-    if (estadoAuto == true && velocidadInicial < 230)
+    if (estadoAuto == true && velocidadActual < 230)
     {
-        velocidadInicial += 15;
-        return velocidadInicial;
+        velocidadActual += 15;
+        return velocidadActual;
     }
-    else if (estadoAuto = false)
+    else if (estadoAuto == false)
     {
         cout << "No se puede acelerar si el auto esta apagado" << endl;
     }
     return 0;
 }
+
 bool Automovil::frenar()
 {
     if (estadoAuto == true)
     {
-        velocidadInicial -= 25;
+        velocidadActual -= 25;
 
-        if (velocidadInicial < 0)
+        if (velocidadActual < 0)
         {
-            velocidadInicial = 0;
-            cout << "La velocidad ha llegado a" << velocidadInicial << endl;
+            velocidadActual = 0;
+            cout << "La velocidad ha llegado a" << velocidadActual << endl;
         }
         else
         {
@@ -94,6 +93,7 @@ bool Automovil::prenderLuces()
     }
     return 0;
 }
+
 bool Automovil::apagarLuces()
 {
     if (estadoAuto == true)

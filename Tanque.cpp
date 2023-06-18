@@ -10,7 +10,6 @@ Tanque::Tanque()
 {
     capacidad = 42;
     nivelActual = 42; // EL TANQUE ESTA LLENO
-    velocidad.setVelocidadActual(0);
 }
 
 int Tanque::getCapacidad() // valor maximo de carga de la capacidad del tanque
@@ -40,7 +39,7 @@ void Tanque::setNivelActual(bool estadoauto, int num)
 {
     if (estadoauto && num < 230)
     {
-        nivelActual -= 0.005 * velocidad;
+        nivelActual -= 0.005 * velocidadActual;
 
         if (nivelActual < capacidad * 0.15)
         {

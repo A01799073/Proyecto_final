@@ -13,7 +13,6 @@ class Tanque
 private:
     int capacidad;
     int nivelActual;
-    Automovil velocidad;
 
 public:
     Tanque();
