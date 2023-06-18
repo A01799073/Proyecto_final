@@ -5,11 +5,15 @@
 #include <iostream>
 #include "Automovil.h"
 using namespace std;
+
 Automovil::Automovil()
 {
     bool estadoAuto = false;
     int velocidadActual = 0;
-    luces.getEstado(false);
+    luces.setEstado(false);
+    tanque.setNivelActual(velocidadActual);
+    tanque.setCapacidad(velocidadActual);
+    llantas.setPresion(33);
 }
 
 bool Automovil::encenderAuto()
@@ -46,13 +50,18 @@ bool Automovil::acelerar()
     if (estadoAuto == true && velocidadActual < 230)
     {
         velocidadActual += 15;
-        return velocidadActual;
+        return true;
+
+        if (velocidadActual > 160)
+        {
+            cout << "¡PELIGRO!" << endl;
+        }
     }
     else if (estadoAuto == false)
     {
         cout << "No se puede acelerar si el auto esta apagado" << endl;
     }
-    return 0;
+    return false;
 }
 
 bool Automovil::frenar()
@@ -60,18 +69,19 @@ bool Automovil::frenar()
     if (estadoAuto == true)
     {
         velocidadActual -= 25;
+        return true;
 
         if (velocidadActual < 0)
         {
             velocidadActual = 0;
-            cout << "La velocidad ha llegado a" << velocidadActual << endl;
+            return false;
         }
         else
         {
             cout << "No puede frenar si el auto está apagado, por favo enciendalo" << endl;
         }
     }
-    return 0;
+    return false;
 }
 
 bool Automovil::prenderLuces()
@@ -110,6 +120,31 @@ bool Automovil::apagarLuces()
     else
     {
         cout << "No se puede preden prender las luces si el auto esta apagado" << endl;
+    }
+    return 0;
+}
+
+double Automovil::cargar()
+{
+    if (estadoAuto == true)
+    {
+        tanque.setNivelActual(velocidadActual);
+        tanque.getNivelActual();
+
+        if (tanque.getNivelActual() < 42 * 01.5)
+        {
+            double litros;
+            cout << "Ingrese los litros que desea agregar: " << endl;
+            cin >> litros;
+            tanque.setCapacidad(litros);
+        }
+    }
+    else
+    {
+        double litros;
+        cout << "Ingrese los litros que desea agregar: " << endl;
+        cin >> litros;
+        tanque.setCapacidad(litros);
     }
     return 0;
 }
