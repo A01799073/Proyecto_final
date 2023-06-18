@@ -43,19 +43,22 @@ int Automovil::getVelocidadActual()
 
 bool Automovil::acelerar()
 {
-    if (estadoAuto = true && velocidadActual < 230)
+    if (estadoAuto == true && velocidadActual < 230)
     {
         velocidadActual += 15;
         return velocidadActual;
     }
-    else if (estadoAuto = false)
+    else if (estadoAuto == false)
     {
         cout << "No se puede acelerar si el auto esta apagado" << endl;
     }
+
+    return 0;
 }
+
 bool Automovil::frenar()
 {
-    if (estadoAuto = true && velocidadActual>0)
+    if (estadoAuto == true && velocidadActual>0)
     {
         velocidadActual -= 25;
         return velocidadActual;
@@ -69,7 +72,7 @@ bool Automovil::frenar()
         cout << "No puede frenar si el auto está apagado, por favo enciendalo" << endl;
     }
     }
-    return false;
+    return 0;
 }
 
 bool Automovil::prenderLuces()
@@ -81,7 +84,7 @@ bool Automovil::prenderLuces()
             estadoLuces = true;
             cout << "Las luces se encendieron correctamente" << endl;
         }
-        else if (estadoLuces = true)
+        else if (estadoLuces == true)
         {
             cout << "Las luces ya estaban prendidas" << endl;
         }
