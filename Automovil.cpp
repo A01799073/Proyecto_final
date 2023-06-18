@@ -2,18 +2,14 @@
     Autor:Kenia Esmeralda Ramos Javier.
     Implementación de la clase Automovil.
 */
-
+#include <iostream>
 #include "Automovil.h"
-<<<<<<< Updated upstream
 using namespace std;
-
-=======
->>>>>>> Stashed changes
 Automovil::Automovil()
 {
     bool estadoAuto = false;
     luces.setEstado(false);
-    int velocidadInicial = 0;
+    int velocidadActual = 0;
 }
 
 bool Automovil::encenderAuto()
@@ -26,6 +22,7 @@ bool Automovil::encenderAuto()
     {
         cout << "El auto ya esta encendido" << endl;
     }
+    return 0;
 }
 
 bool Automovil::apagarAuto()
@@ -35,17 +32,15 @@ bool Automovil::apagarAuto()
         return false;
     }
     else
+    {
         cout << "El auto está apagado" << endl;
+    }
+    return 0;
 }
 
 int Automovil::getVelocidadActual()
 {
     return velocidadInicial;
-}
-
-void Automovil::setVelocidadActual(int num)
-{
-    this->velocidadInicial = num;
 }
 
 bool Automovil::acelerar()
@@ -59,12 +54,14 @@ bool Automovil::acelerar()
     {
         cout << "No se puede acelerar si el auto esta apagado" << endl;
     }
+    return 0;
 }
 bool Automovil::frenar()
 {
-    if (estadoAuto== true)
+    if (estadoAuto == true)
     {
         velocidadInicial -= 25;
+
         if (velocidadInicial < 0)
         {
             velocidadInicial = 0;
@@ -75,42 +72,44 @@ bool Automovil::frenar()
             cout << "No puede frenar si el auto está apagado, por favo enciendalo" << endl;
         }
     }
-    return false;
+    return 0;
 }
 
 bool Automovil::prenderLuces()
 {
     if (estadoAuto == true)
     {
-        if (luces.getEstado()==false)
+        if (luces.getEstado() == false)
         {
             cout << "Las luces se encendieron correctamente" << endl;
         }
         else
         {
-            cout<< "Las luces ya estaban prendidas" << endl;
+            cout << "Las luces ya estaban prendidas" << endl;
         }
     }
     else
     {
         cout << "No se pueden prender las luces si el auto esta apagado" << endl;
     }
+    return 0;
 }
 bool Automovil::apagarLuces()
 {
-    if (estadoAuto==true)
+    if (estadoAuto == true)
     {
-        if (luces.getEstado()==true)
+        if (luces.getEstado() == true)
         {
-            cout<< "Las luces se apagaron correctamente"<<endl;
+            cout << "Las luces se apagaron correctamente" << endl;
         }
         else
         {
-            cout<<"Las luces ya estaban apagadas"<<endl;
+            cout << "Las luces ya estaban apagadas" << endl;
         }
     }
     else
     {
-        cout<<"No se puede preden prender las luces si el auto esta apagado"<<endl;
+        cout << "No se puede preden prender las luces si el auto esta apagado" << endl;
     }
+    return 0;
 }

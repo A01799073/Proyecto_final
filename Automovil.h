@@ -19,7 +19,6 @@ public:
     bool apagarAuto();
 
     int getVelocidadActual();
-    void setVelocidadActual(int num);
 
     bool acelerar();
     bool frenar();
