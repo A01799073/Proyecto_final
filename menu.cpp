@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    cout<<"Kenia Esmeralda Ramos Javier. A01799073. ITC"
+    cout<<"Kenia Esmeralda Ramos Javier. A01799073. ITC";
     Automovil auto1;
     int opcionMenu;
 
