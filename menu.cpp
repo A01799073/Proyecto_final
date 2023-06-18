@@ -71,7 +71,7 @@ int main()
             break;
 
         case 6:
-            //el constructor de la gasolina
+            auto1.cargar();
             break;
         case 7:
             auto1.
