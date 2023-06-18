@@ -8,7 +8,7 @@ using namespace std;
 
 Automovil::Automovil()
 {
-    bool estadoAuto = false;
+    bool estadoAuto=false;
     int velocidadActual = 0;
     luces.setEstado(false);
     tanque.setNivelActual(velocidadActual);
@@ -161,5 +161,29 @@ void Automovil::inflarDesinflarLlanta(int indice, double presion)
         cout<<"La llanta"<<indice + 1<<" ha sido inflada/desinfalsada"<<endl;
         cout<<"La presion actual de la llanta es de: "<<llantas[indice].getPresion();
     }
+    
+}
+
+void Automovil::mostrarTablero()
+{
+    cout<<"NOTA: True=Encendido | False= Apagado";
+    cout<<"Estado del auto: " <<estadoAuto<<endl;
+    cout<<"Velocidad: "<<velocidadActual<<"km/h"<<endl;
+    cout<<"Nivel de gasolina: " << tanque.getNivelActual()<<"litros"<<endl;
+    cout<<"Luces: " << luces.getEstado()<<endl;
+    for (int i = 0; i < 4; i++)
+    {
+        double presion= llantas[i].getPresion();
+        cout<<"La llanta"<<i+1<<"tien una presion de: "<<presion<<"psi"<<endl;
+
+
+        if (presion>33*0.2 || presion<33*0.2)
+        {
+            cout<<"¡PELIGRO!"<<endl;
+        }
+        
+    }
+    
+
     
 }

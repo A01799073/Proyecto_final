@@ -17,6 +17,8 @@ int main()
 
     do
     {
+        auto1.mostrarTablero();
+
         cout << "                    !Bienvenid@!                   " << endl;
         cout << " Seleccione la opcion que desea consultar del menu " << endl;
         cout << "------------------------MENU-----------------------" << endl;

@@ -32,5 +32,6 @@ public:
     
     double cargar();
     void inflarDesinflarLlanta(int indice, double presion);
+    void mostrarTablero();
 };
 #endif
