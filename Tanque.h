@@ -4,7 +4,7 @@
  *Declaración de la clase Tanque.
  */
 
-#include "Automovil.cpp"
+//#include "Automovil.cpp"
 #ifndef TANQUE_H
 #define TANQUE_H
 
