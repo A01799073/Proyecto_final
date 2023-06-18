@@ -2,8 +2,9 @@
  *Autor: Kenia Esmeralda Ramos Javier.
  *Declaración de la clase Auto
  */
-#include "Luces.cpp"
-#include "Tanque.cpp"
+#include "Luces.h"
+#include "Tanque.h"
+#include "Llantas.h"
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 class Automovil
@@ -12,6 +13,8 @@ private:
     bool estadoAuto;
     int velocidadActual;
     Luces luces;
+    Tanque tanque;
+    Llantas llantas;
 
 public:
     Automovil();
@@ -26,5 +29,6 @@ public:
 
     bool prenderLuces();
     bool apagarLuces();
+     double cargar();
 };
 #endif
