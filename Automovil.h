@@ -12,7 +12,6 @@ private:
     bool estadoAuto;
     int velocidadActual;
     Luces luces;
-    Tanque gasolina;
 
 public:
     Automovil();

@@ -4,12 +4,14 @@
 */
 #include "Automovil.h"
 #include <iostream>
+#include <string>
 using namespace std;
 
 Automovil::Automovil()
 {
     bool estadoAuto = false;
     int velocidadActual = 0;
+
 }
 
 bool Automovil::encenderAuto()
