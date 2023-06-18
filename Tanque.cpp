@@ -35,16 +35,17 @@ int Tanque::getNivelActual() // nivel actual del tanque
     return nivelActual;
 }
 
-void Tanque::setNivelActual(bool estadoauto, int num)
+void Tanque::setNivelActual(int num)
 {
-    if (estadoauto && num < 230)
+    if (num < 230)
     {
-        nivelActual -= 0.005 * velocidadActual;
-
+        nivelActual -= 0.005 * num;
+        
         if (nivelActual < capacidad * 0.15)
         {
             cout << "La capacidad del tanque ha llegado al 15%" << endl;
             cout << "Por favor de llenar el tanque" << endl;
         }
+        return nivelActual;
     }
 }
