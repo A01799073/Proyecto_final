@@ -13,7 +13,6 @@ Automovil::Automovil()
     luces.setEstado(false);
     tanque.setNivelActual(velocidadActual);
     tanque.setCapacidad(velocidadActual);
-    llantas.setPresion(33);
 }
 
 bool Automovil::encenderAuto()
@@ -137,6 +136,7 @@ double Automovil::cargar()
             cout << "Ingrese los litros que desea agregar: " << endl;
             cin >> litros;
             tanque.setCapacidad(litros);
+            
         }
     }
     else
@@ -147,4 +147,19 @@ double Automovil::cargar()
         tanque.setCapacidad(litros);
     }
     return 0;
+}
+
+void Automovil::inflarDesinflarLlanta(int indice, double presion)
+{
+    if (indice<0 || indice>=4)
+    {
+        cout<<"Ingrese la posición de la llanta correcta (1,2,3 o 4)"<<endl;
+    }
+    else
+    {
+        llantas[indice].setPresion(presion);
+        cout<<"La llanta"<<indice + 1<<" ha sido inflada/desinfalsada"<<endl;
+        cout<<"La presion actual de la llanta es de: "<<llantas[indice].getPresion();
+    }
+    
 }

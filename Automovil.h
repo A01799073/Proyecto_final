@@ -14,7 +14,7 @@ private:
     int velocidadActual;
     Luces luces;
     Tanque tanque;
-    Llantas llantas;
+    Llantas llantas[4];
 
 public:
     Automovil();
@@ -29,6 +29,8 @@ public:
 
     bool prenderLuces();
     bool apagarLuces();
-     double cargar();
+    
+    double cargar();
+    void inflarDesinflarLlanta(int indice, double presion);
 };
 #endif

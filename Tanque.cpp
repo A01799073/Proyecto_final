@@ -46,6 +46,5 @@ void Tanque::setNivelActual(int num)
             cout << "La capacidad del tanque ha llegado al 15%" << endl;
             cout << "Por favor de llenar el tanque" << endl;
         }
-        return nivelActual;
     }
 }

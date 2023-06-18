@@ -8,9 +8,6 @@
 
 #include <iostream>
 #include "Automovil.h"
-#include "Automovil.cpp"
-#include "Tanque.h"
-#include "Tanque.cpp"
 using namespace std;
 
 int main()
@@ -38,27 +35,30 @@ int main()
         switch (opcionMenu)
         {
         case 1:
-        int opcionAuto;
-            cout<<"¿Desea apagar o prender el automovil?: "<<endl<<"1. Encender"<<endl<<"2.-Apagar"<<endl;
-            cin>>opcionAuto;
+            int opcionAuto;
+            cout << "¿Desea apagar o prender el automovil?: " << endl
+                 << "1. Encender" << endl
+                 << "2.-Apagar" << endl;
+            cin >> opcionAuto;
 
-            if (opcionAuto==1)
+            if (opcionAuto == 1)
             {
                 auto1.encenderAuto();
                 break;
             }
-            else if (opcionAuto==2)
+            else if (opcionAuto == 2)
             {
                 auto1.apagarAuto();
             }
             else
             {
-                count<<"Opcion no disponible"<<endl;
-                break;
+                cout << "Opcion no disponible" << endl;
             }
 
+            break;
+
         case 2:
-            auto1.acelerar()
+            auto1.acelerar();
             break;
         case 3:
             auto1.frenar();
@@ -74,7 +74,13 @@ int main()
             auto1.cargar();
             break;
         case 7:
-            auto1.
+            int llantas;
+            double presion;
+            cout<<"Ingrese la posición de la llanta (1,2,3 o 4)" << endl;
+            cin >> llantas;
+            cout << "Ingrese la presion que quiera modificar: " << endl;
+            cin >> presion;
+            auto1.inflarDesinflarLlanta(llantas - 1, presion);
             break;
 
         case 8:
